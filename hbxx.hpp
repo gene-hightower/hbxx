@@ -16,12 +16,12 @@ public:
 
   ~buffer() { hb_buffer_destroy(buf_); }
 
-  void add_utf8(std::string const &str)
+  void add_utf8(std::string const& str)
   {
     hb_buffer_add_utf8(buf_, str.data(), str.length(), 0, str.length());
   }
 
 private:
-  hb_buffer_t *buf_;
+  hb_buffer_t* buf_;
 };
 }
